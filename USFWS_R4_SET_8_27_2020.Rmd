@@ -103,7 +103,7 @@ Wetland ecosystems are critical for providing important ecological functions. Fo
 
 The goal of this project under a cooperative agreement between US Fish & Wildlife Service and the University of Delaware, is to further improve existing code that Zach Ladin developed previously for modeling, analyzing, and generating trend-estimation graphs and reports of surface elevation table (SET) data for regions and refuge managers, and for extending this functionality for incorporation within the USFWS National SET Application. Using these tools, an updated report integrating existing SET data from USFWS Northeast and Southeast Regions will be generated.
 
-The US Fish and Wildlife Service Region 4 has implemented the Coastal Wetland Elevation Monitoring Protocol [@moorman_et_al_2019; @moorman_and_rankin_2020] in an ongoing effort to assess and track the condition of wetland habitats on USFWS Refuges. The development of analytical tools using data from this long-term monitoring program will help identify priority analyses for refuge-specific monitoring and management decisions. Here, we extend a recently-completed suite of analysis functionality within program R [@r-base] that was developed to analyze the surface elevation table (SET) data collected by the US Fish and Wildlife Service and other partnering institutions in Region 4. This report contains results using these tools to analyze SET data from the southeast region (Region 4) USFWS refuges.
+The US Fish and Wildlife Service Legacy Region 4 has implemented the Coastal Wetland Elevation Monitoring Protocol [@moorman_et_al_2019; @moorman_and_rankin_2020] in an ongoing effort to assess and track the condition of wetland habitats on USFWS Refuges. The development of analytical tools using data from this long-term monitoring program will help identify priority analyses for refuge-specific monitoring and management decisions. Here, we extend a recently-completed suite of analysis functionality within program R [@r-base] that was developed to analyze the surface elevation table (SET) data collected by the US Fish and Wildlife Service and other partnering institutions in Legacy Region 4. This report contains results using these tools to analyze SET data from the southeast region (Legacy Region 4) USFWS refuges.
 
 ## Objectives
 
@@ -113,7 +113,7 @@ The US Fish and Wildlife Service Region 4 has implemented the Coastal Wetland El
 
 ## Methods
 
-We developed data analysis tools in program R [@r-base] that enables users to analyze SET data using methods described in the SOP 8: SET and Marker Horizon Data Analysis [@lynch_surface_2015]. This analysis includes data collected from USFWS refuges located in Region 4 (Table 1). Data was acquired from reports that were downloaded from: https://ecos.fws.gov/SET/Report/setusers/Export%20Pin%20Data. Standardized column headers and fields for SET data entered into the National SET Application were discussed and refined, to enable the streamlining of data processing and integration with functions included within the R code used in the present analysis.
+We developed data analysis tools in program R [@r-base] that enables users to analyze SET data using methods described in the SOP 8: SET and Marker Horizon Data Analysis [@lynch_surface_2015]. This analysis includes data collected from USFWS refuges located in Legacy Region 4 (Table 1). Data was acquired from reports that were downloaded from: https://ecos.fws.gov/SET/Report/setusers/Export%20Pin%20Data. Standardized column headers and fields for SET data entered into the National SET Application were discussed and refined, to enable the streamlining of data processing and integration with functions included within the R code used in the present analysis.
 
 We first visualized SET data, by computing changes in wetland elevation (mm) at each pin, and plotted these relative wetland heights against time (years).  Then, by averaging among SET stations, discrete wetland monitoring sites, and National Wildlife Refuges (NWRs), produced figures showing (mean $\pm$ SE) relative changes in wetland elevation (mm/year). We converted raw SET measurements of wetland surface elevation (mm) to the rate of change in surface elevation (mm/year; hereafter delta SET) from the initial measurement at time (t0), following methods described in @lynch_surface_2015. To calculate mean and variance estimates of delta SET at higher-levels, we averaged delta SET estimates (i.e., slopes of regression models) over the four positions, and then these were averaged to get SET station-level estimates (Lynch et al. 2015). We then computed higher-level estimation of rates (i.e., mean $\pm$ SE slope of delta SET) at the wetland site level, NWR Unit level, and at the regional scale.  Additionally, we developed NWR and Site-level summaries for assessment of local-scale changes in wetland elevation change dynamics.
 
@@ -168,7 +168,7 @@ register_google(key="AIzaSyDerv2JQubJ_Dg8_RKBZCeyo5zqsM5USw0")
 ### Statement of Progress
 1)	We are continuing to work cooperatively, and have identified the following analysis priorities for data associated with SET data. In this case we address priorities associated specifically with wetland surface elevation table (SET) data:
 
-2)	We analyzed data collected at SET stations (*N* = 58) located within monitoring sites (*N* = 21; Fig. 1) among 18 NWRs  within the USFWS Southeast Region 4 (Table 1). 
+2)	We analyzed data collected at SET stations (*N* = 58) located within monitoring sites (*N* = 21; Fig. 1) among 18 NWRs  within the USFWS Southeast Legacy Region 4 (Table 1). 
 
 3)	We have developed analytical tools in program R [@r-base] to facilitate current and future analysis of SET data. Extensive R code is provided in the form of scripts (.R files) that contain functions to format data, summarize data in tabular and graphical formats, analyze data, save results (tables and figures), and produce R Markdown files (.Rmd) that can generate .doc, .html, or .pdf reports. All R code is thoroughly annotated with clear comments to help users implement analyses using program R and R Studio.
     
@@ -319,7 +319,7 @@ pander(data.table.5)
 
 \newpage
 
-#### Figure 1. Study Area showing sites (*N* = 22) where SET benchmarks are located among 19 USFWS National Wildlife Refuges, Southeast Region. 
+#### Figure 1. Study Area showing sites (*N* = 22) where SET benchmarks are located among 19 USFWS National Wildlife Refuges, Southeast Legacy Region 4. 
 ```{r, warning=FALSE, message=FALSE, fig.width=10, fig.height=10, dpi=150}
 #Map with study area locations
 
@@ -1004,7 +1004,7 @@ We thank the following individuals for their help in several areas, and for prov
 
 
 
-## Apenndix
+## Appendix
 
 ### Appendix A. Pin-level regression plots at each SET station (among 4 arm positions)
 ```{r, eval=TRUE, fig.height=8, fig.width=7, dpi=150, results='asis'}
